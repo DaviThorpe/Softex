@@ -1,0 +1,10 @@
+Instruções do projeto
+Pesquise sobre os grafos e apresente dois exemplos de como são utilizados no contexto tecnológico.
+
+--------------------------------------------------------------------------------------------------
+
+Um exemplo seria as páginas da internet, que possuem um link de uma página para outra. Onde o site 
+seria o vértice e o link de uma página para outra seria a aresta.
+
+Outro exemplo é o Instagram e a forma como ele conecta diversas pessoas, sendo cada pessoa um vértice
+e o "seguir" outras pessoas seria a aresta.
