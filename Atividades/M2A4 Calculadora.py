@@ -29,7 +29,6 @@ def calculadora (num1, num2, num3):
 num1 = float(input('Insira um número:'))
 num2 = float(input('Insira outro número: '))
 num3 = float(input('Insira 1 (soma), 2 (subtração), 3 (multiplicação) ou 4 (divisão): '))
-
 resultado = calculadora(num1, num2, num3)
 print('Esse é seu resultado:', resultado)
 
