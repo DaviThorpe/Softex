@@ -7,7 +7,6 @@
 
 # Inicio do código
 
-
 nasc_certo = False
 
 while (nasc_certo == False):
