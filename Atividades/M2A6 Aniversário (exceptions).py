@@ -21,4 +21,4 @@ while (nasc_certo == False):
         else:
             print('Erro!! Você deve digitar um ano entre 1922 e 2021')
     except:
-        print('Você digitou um ano de nascimento inválido')
+        print('Você digitou algo inválido')
