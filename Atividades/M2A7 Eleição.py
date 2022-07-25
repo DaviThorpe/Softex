@@ -44,17 +44,20 @@ while votar == True:
                 print('O vencedor foi o cadidado X com {} votos!'.format(votos_candidato_x))
                 print('Votos Candidato Y: {}'.format(votos_candidato_y))
                 print('Votos Candidato Z: {}'.format(votos_candidato_z))
-                print('Votos Brancos e Nulos: {}'.format(votos_brancos + votos_nulos))
+                print('Votos Nulos: {}'.format(votos_nulos))
+                print('Votos Brancos: {}'.format(votos_brancos))
             elif votos_candidato_y > votos_candidato_x and votos_candidato_y > votos_candidato_z:
                 print('O vencedor foi o cadidado y com {} votos!'.format(votos_candidato_y))
                 print('Votos Candidato X: {}'.format(votos_candidato_x))
                 print('Votos Candidato Z: {}'.format(votos_candidato_z))
-                print('Votos Brancos e Nulos: {}'.format(votos_brancos + votos_nulos))
+                print('Votos Nulos: {}'.format(votos_nulos))
+                print('Votos Brancos: {}'.format(votos_brancos))
             elif votos_candidato_z > votos_candidato_x and votos_candidato_z > votos_candidato_y:
                 print('O vencedor foi o cadidado z com {} votos!'.format(votos_candidato_z))
                 print('Votos Candidato X: {}'.format(votos_candidato_x))
                 print('Votos Candidato Y: {}'.format(votos_candidato_y))
-                print('Votos Brancos e Nulos: {}'.format(votos_brancos + votos_nulos))
+                print('Votos Nulos: {}'.format(votos_nulos))
+                print('Votos Brancos: {}'.format(votos_brancos))
             elif fim == 2:
                 votar = True
     except:
