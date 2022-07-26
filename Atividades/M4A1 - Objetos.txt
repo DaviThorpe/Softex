@@ -1,0 +1,24 @@
+Instruções do projeto
+Classifique dois objetos materiais e dois abstratos. 
+Insira, no mínimo, três métodos e três atributos para cada.
+
+=======================================================================================
+
+Objeto material 1: ventilador
+atributos - número de paletas: 6, cor: preta, instalação: de teto
+métodos: ligado, desligado, aumentar velocidade, girar, fixo
+
+Objeto material 2: microfone
+atributos - bidirecional, com condensador, saída usb
+métodos - ligar redução de ruído, ganho de volume ativo, mudar padrão polar
+
+=======================================================================================
+
+Objeto abstrato 1: corrida de carro
+atributos - número de voltas: 5, quantidade de carro máxima: 60, tem narrador: sim
+métodos - começar, paralizar, contar número de voltas
+
+
+Objeto abstrato 2: video
+atributos - duração do video: 2, formato da tela: 16:9, resolução: 1080p
+métodos - iniciar, pausar, reduzir resolução
