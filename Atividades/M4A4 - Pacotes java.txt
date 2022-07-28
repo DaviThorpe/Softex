@@ -13,17 +13,26 @@ package br.ca.acai;
 
 public class Cliente {
 	public nome;
-	public telefone;
+	public telefone; 
+}
 
+public class Registro_vendas{
+	public vendas;
 }
 
 
 # Criando pacote 2
 
-package br.sbf.salao; 
+package br.ane.atletas; 
 
-public class Produto {
-	puclic fornecedor;
-	public custo;
+public class  Atletas{
+	puclic nome;
+	public registro;
+	public medalhas;
 
+}
+
+public class Patrocinios {
+	public nike;
+	public adidas;
 }
