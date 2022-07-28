@@ -6,7 +6,7 @@
 # Inicio do código
 
 class Atletas:
-    
+
     total_atletas = 0
 
     def __init__(self):
@@ -19,7 +19,7 @@ class Atletas:
         self.registro = registro
         self.medalhas = medalhas
 
-        Atletas.total_atletas += 1
+        Atletas.total_atletas = Atletas.total_atletas + 1
 
     def imprimir(self):
         print('Nome: {}'.format(self.nome))
@@ -28,15 +28,15 @@ class Atletas:
 
 
 atleta1 = Atletas()
-atleta2 = Atletas()
-atleta3 = Atletas()
-
 atleta1.cadastro('João', 5120, 6)
-atleta2.cadastro('Maria', 6468, 4)
-atleta3.cadastro('Curupira', 9746, 27)
-
 atleta1.imprimir()
+
+atleta2 = Atletas()
+atleta2.cadastro('Maria', 6468, 4)
 atleta2.imprimir()
+
+atleta3 = Atletas()
+atleta3.cadastro('Curupira', 9746, 27)
 atleta3.imprimir()
 
 print('Temos um total de {} atletas cadastrados'.format(Atletas.total_atletas))
