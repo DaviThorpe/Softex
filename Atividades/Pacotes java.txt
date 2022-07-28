@@ -1,0 +1,45 @@
+package banco;
+
+public class Conta {
+
+      //declarações de atributos e métodos
+
+}
+====================================================================================
+
+Para organizar melhor as classes em um código, 
+é utilizada a hierarquia de organização dos diretórios de um computador.
+
+ 
+
+Exemplo:
+
+ 
+
+package cxa.banco;
+
+public class Conta {
+
+      //declarações de atributos e métodos
+
+}
+
+Com esse processo, existirá uma pasta “cxa” e nela será inserida a pasta “banco”.
+
+=====================================================================================
+
+A Java tem um padrão de nomenclatura dos pacotes 
+que consiste no nome da empresa que o está criando, 
+padronizado no estilo de uma URL invertida.
+
+ 
+
+Exemplo:
+
+ 
+
+package br.cxa.banco;
+
+package br.gov.empresa;
+
+package br.gov.empresa.sis.pacote;

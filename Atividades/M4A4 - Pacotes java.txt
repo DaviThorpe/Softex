@@ -1,0 +1,29 @@
+# Instruções
+# Crie dois pacotes baseados nas atribuições de uma empresa 
+# e inclua classes neles. 
+# Lembre-se de trabalhar com os padrões Java.
+
+
+# Inicio do código
+
+
+# Criando pacote 1
+
+package br.ca.acai;
+
+public class Cliente {
+	public nome;
+	public telefone;
+
+}
+
+
+# Criando pacote 2
+
+package br.sbf.salao; 
+
+public class Produto {
+	puclic fornecedor;
+	public custo;
+
+}
