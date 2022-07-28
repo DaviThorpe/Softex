@@ -5,33 +5,38 @@
 
 # Inicio do código
 
-total_carros = int()
-
-class estacionamento():
-    def __init__(self, bloco, modelo, vaga):
-        self.bloco = bloco
-        self.modelo = modelo
-        self.vaga = vaga
+class Atletas:
     
-    # Método
-    def estacionado(self):
-        print('O carro número {} está estacionado na vaga {}'.format(estacionamento.total_carros, self.vaga))
-    
-    # Incremento
-    def total ():
-        estacionamento.total_carros = (total_carros + 1)
-    
-    # imprimindo 
-    def situacao (self):
-        print('O carro modelo: {} está no bloco {}, na vaga {}'.format(self.modelo, self.bloco, self.vaga))
+    total_atletas = 0
 
-    # Mostrando o total de carros
-    def total_car():
-        print('O total de carros é: {}'.format(total_carros))
+    def __init__(self):
+        self.nome = ''
+        self.registro = 0
+        self.medalhas = 0
 
-# Testando os objetos
+    def cadastro(self, nome, registro, medalhas):
+        self.nome = nome
+        self.registro = registro
+        self.medalhas = medalhas
 
-carro_1 = estacionamento('A','honda_civc',1)
-carro_1.total()
-carro_1.situacao()
-carro_1.total_car()
+        Atletas.total_atletas += 1
+
+    def imprimir(self):
+        print('Nome: {}'.format(self.nome))
+        print('Registro: {}'.format(self.registro))
+        print('Medalhas: {}'.format(self.medalhas))
+
+
+atleta1 = Atletas()
+atleta2 = Atletas()
+atleta3 = Atletas()
+
+atleta1.cadastro('João', 5120, 6)
+atleta2.cadastro('Maria', 6468, 4)
+atleta3.cadastro('Curupira', 9746, 27)
+
+atleta1.imprimir()
+atleta2.imprimir()
+atleta3.imprimir()
+
+print('Temos um total de {} atletas cadastrados'.format(Atletas.total_atletas))
