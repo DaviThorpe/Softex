@@ -1,0 +1,21 @@
+# Instruções do projeto
+# Crie uma situação em que ocorra uma exceção dentro de um código. 
+# Utilize try/catch para realizar a captura e tratamento dessa exceção. 
+
+# Inicio do código
+
+public class Atleta {
+    public String nome;
+    public int medalhas;
+    
+    public static void main(String[] args) {
+        try {
+            public Atleta(int medalhas) {
+                this.medalhas = medalhas;
+            }
+        }   
+        catch (Exception ex) {
+            System.out.printIn("Valor inválido, você deve digitar apenas números inteiros!")
+        }
+    }
+}
