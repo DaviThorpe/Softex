@@ -56,7 +56,10 @@ Product - define a interface de objetos que deverá ser criado pelo método fáb
 ConcreteProduct – implementação da interface Product;
 Creator – declara o método fábrica o qual retorna um objeto do tipoProduct;
 ConcreteCreator – redefine(override) o método fábrica que retorna uma instância concreta da interfaceProduct.
-O padrão Factory Method elimina a necessidade de anexar classes específicas das aplicações no código. O código lida somente com a interface de Product; portanto ele pode trabalhar com qualquer implementação da classe que implementa Product, definida pelo usuário.
+
+O padrão Factory Method elimina a necessidade de anexar classes específicas das aplicações no código. 
+O código lida somente com a interface de Product; 
+portanto ele pode trabalhar com qualquer implementação da classe que implementa Product, definida pelo usuário.
 
 Fontes: 
 https://refactoring.guru/pt-br/design-patterns. Acessado em 31/07/2022
