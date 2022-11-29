@@ -1,0 +1,28 @@
+O desenvolvimento de um projeto de banco de dados passa por fases que são de grande importância para sua implementação. 
+Descreva as etapas desse processo.
+
+# Resposta
+
+1) Análise de Requisitos
+Nesse começo do processo, deve ocorrer uma análise de requisitos, ou seja, todas as regras que irão compor o sistema do 
+negócio que será desenvolvido. São regras que serão definidas pelo Product Owner do projeto. 
+
+2) Modelos de Dados Conceituais
+Em equipes ágeis, esses modelos às vezes são chamados modelos de domínio e são originalmente utilizados para explorar 
+conceitos do domínio com os envolvidos no projeto. Os modelos conceituais de alto nível geralmente são criados como 
+parte do esforço inicial da compreensão dos requisitos do sistema. 
+
+Já em equipes não ágeis (tradicionais), os modelos de dados conceituais são normalmente elaborados como antecessores aos 
+modelos lógicos de dados (MDS).
+
+3) Modelos Lógicos de Dados (MDS)
+MLDs são utilizados para explorar os conceitos do domínio e seus relacionados. MLDS raramente são usados em projetos ágeis, 
+apesar de geralmente estarem presentes em projetos tradicionais.
+
+Esse modelo consiste na evolução a partir dos primeiros modelos elaborados, normalmente os conceituais, 
+onde são adicionadas informações complementares.
+
+4) Modelos Físicos de Dados (MFDS)
+MFDS são utilizados para criar o esquema interno de um banco de dados, sendo bastante úteis em projetos ágeis e tradicionais. 
+
+Embora tanto o MDS quanto o MFDS pareçam semelhantes, e de fato são, o nível de detalhes que eles modelam podem ser extremamente diferentes.

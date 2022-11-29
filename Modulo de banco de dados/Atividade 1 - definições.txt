@@ -2,6 +2,8 @@ O Sistema de Gerenciamento de Bancos de Dados é um conjunto de programas que se
 
 Defina: dados, banco de dados, modelo de dados, metadados e catálogo de dados.
 
+# Resposta
+
 Banco de Dados: É uma coleção de dados persistentes, pois mesmo ao desligar a máquina os dados continuam armazenados. 
 Esse conjunto de dados inter-relacionados podem ser classificados como relacional ou não relacional.
 
