@@ -1,0 +1,8 @@
+De acordo com o conteúdo estudado, cite exemplos de Sistemas de Bancos de Dados 
+relacionais e não relacionais (NoSQL).
+
+# Resposta
+
+Exemplos de SGBDs são: Oracle, SQL Server, DB2, PostgreSQL, MySQL
+
+Exemplos de SGBDs noSQL são: Redis, Memcached, Cassandra, Hbase, Amazon DynamoDB
