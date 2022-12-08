@@ -1,0 +1,72 @@
+A chave mestra é a raiz hierárquica da criptografia do SQL. 
+Ela representa uma chave exclusiva para cada banco de dados e 
+é utilizada para proteger as privadas de certificados, as assimétricas e as simétricas.
+É possível gerar uma chave mestra, que requer uma senha, usando o seguinte comando:
+
+CREATE MASTER KEY ENCRYPTION BY 
+PASSWORD = 'senha'
+
+=========================================================================================================
+O certificado é o segundo item na hierarquia de criptografia do SQL 
+e é responsável por proteger as chaves simétricas e assimétricas.
+ 
+
+No certificado, é importante ter uma chave mestra com senha, 
+que será usada para proteger os objetos abaixo dela na hierarquia.
+ 
+
+Segue o comando  para a criação do certificado:
+
+CREATE CERTIFICATE MeuCertificado
+
+ENCRYPTION BY PASSWORD = 'SENHA@123'
+
+WITH SUBJECT = 'Meu Certificado'
+
+
+=========================================================================================================
+A chave simétrica é usada para criptografar e descriptografar dados no banco de dados. 
+Quando for produzida, ela deve ser criptografada com um certificado, uma senha e outra chave, 
+sendo ela simétrica ou assimétrica.
+
+É necessário conhecer algum método de criptografia que especifique como os dados se tornam 
+ilegíveis para indivíduos não autorizados.
+
+
+As alternativas para esse parâmetro são:
+
+DES, TRIPLE_DES, TRIPLE_DES_3KEY, RC2, RC4, RC4_128, DESX, AES_128, AES_192 e AES_256.
+
+=========================================================================================================
+Para criar uma chave simétrica com o algoritmo AES 256 e criptografá-la com um certificado:
+
+CREATE SYMMETRIC KEY MinhaChave
+
+WITH ALGORITHM = AES_256
+
+ENCRYPTION BY CERTIFICATE MeuCertificado
+
+=========================================================================================================
+Para descriptografar esses dados e visualizar o valor real no campo de senha, 
+é necessário reabrir a chave simétrica, ler esse campo com a função DECRYPTBYKEY, 
+converter o valor para varchar e fechar a chave.
+
+
+Por exemplo:
+
+OPEN SYMMETRIC KEY ChaveSenha
+
+DECRYPTION BY CERTIFICATE Certificado
+
+GO
+
+SELECT * senhadescriptografada = CAST (DECRYPTBYKEY(SENHA) AS varchar(50))
+
+FROM Usuario
+
+CLOSE SYMMETRIC KEY ChaveSenha
+
+
+
+
+
