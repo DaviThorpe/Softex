@@ -1,0 +1,14 @@
+Questão:Uma empresa está sofrendo ataques que impactam diretamente a sua segurança. 
+Então, ela precisa atualizar as senhas de todos os seus funcionários. 
+
+Cite pelo menos três métodos para melhorar essas senhas.
+
+# Resposta
+
+Algumas práticas para construir senhas fortes são:
+
+1) Utilizar caracteres diferentes;
+2) Estabelecer um número máximo e mínimo de dígitos;
+3) Evitar dados pessoais;
+4) Trocar periodicamente as senhas.
+ 
