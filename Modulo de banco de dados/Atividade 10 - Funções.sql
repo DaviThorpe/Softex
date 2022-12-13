@@ -1,30 +1,20 @@
-create database loja;
-use loja;
-
 create table clientes(
 nome varchar (30),
-reg int,
-dia varchar(10)
-);
+registro int not null auto_increment,
+dtCadastro date,
+primary key (registro));
 
 insert into clientes
-(nome, reg, dia)
+(nome, dtCadastro)
 values
-('Pedro', '1', '2022-09-19'),
-('Ana', '1', '2022-09-19'),
-('Julio', '1', '2022-09-19'),
-('Paula', '1', '2022-09-19'),
-('Lucas', '1', '2022-09-20');
+('Pedro', '2022-09-19'),
+('Ana', '2022-09-19'),
+('Julio', '2022-09-19'),
+('Paula', '2022-09-19'),
+('Lucas', '2022-09-20');
 
 select * from clientes;
 
-
-create function soma_cli(a int)
-returns int 
-return sum(a);
-
-select sum(clientes.reg) from clientes;
-
-
-
-drop table clientes;
+SELECT COUNT(registro) as cadastros_dia , dtCadastro 
+from clientes
+group by dtCadastro;
