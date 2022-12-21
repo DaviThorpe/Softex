@@ -1,4 +1,3 @@
-
 /* 
 Crie uma função que some todos os clientes cadastrados em uma loja durante um dia.
 */
@@ -12,6 +11,8 @@ registro int not null auto_increment,
 dtCadastro date,
 primary key (registro));
 
+select * from clientes;
+
 insert into clientes
 (nome, dtCadastro)
 values
@@ -24,36 +25,29 @@ values
 insert into clientes
 (nome, dtCadastro)
 values
-('Laura', '2022-12-14'),
-('Leo', '2022-12-14'),
-('Menó', '2022-12-14'),
-('Valença', '2022-12-14'),
-('Luciana', '2022-12-14');
+('Laura', '2022-12-21'),
+('Leo', '2022-12-21'),
+('Menó', '2022-12-21'),
+('Valença', '2022-12-21'),
+('Luciana', '2022-12-21');
 
 select * from clientes;
 
-/*A função não funciona de um modo realmente prático, precisa de algum ajuste para aceitar qualquer data
-no momento ela irá esta somando todos os cadastros independete do dia*/
+/*A função não funciona de um modo realmente prático, precisa de algum ajuste
+no momento ela irá somar todos os cadastros independete do dia*/
 
 delimiter $$
 
 CREATE FUNCTION fn_soma (registro int, dtCadastro date) RETURNS INT
 BEGIN
 	
-declare Soma int;
-if dtCadastro = curdate() then	
-	SELECT count(registro) from clientes where dtCadastro = curdate()
+declare Soma int;	
+	SELECT count(registro) from clientes where day(dtCadastro)=day('2022-12-21')
     into Soma;
 	RETURN Soma;
-    
-else
-	set Soma = '1';    
-    RETURN Soma;
-end if;
         
 END $$
 
 delimiter ; 
 
-select fn_soma(registro, dtCadastro) as clientes_cadastrados, dtCadastro from clientes
-where dtCadastro = curdate(); 
+select fn_soma(registro, dtCadastro) as clientes_cad, day(dtCadastro) as dia_cad from clientes; 
