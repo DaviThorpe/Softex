@@ -16,25 +16,13 @@ select * from clientes;
 insert into clientes
 (nome, dtCadastro)
 values
-('Pedro', '2022-09-19'),
-('Ana', '2022-09-19'),
-('Julio', '2022-09-19'),
-('Paula', '2022-09-19'),
-('Lucas', '2022-09-20');
-
-insert into clientes
-(nome, dtCadastro)
-values
-('Laura', '2022-12-21'),
-('Leo', '2022-12-21'),
-('Menó', '2022-12-21'),
-('Valença', '2022-12-21'),
-('Luciana', '2022-12-21');
+('Pedro', curdate()),
+('Ana', curdate()),
+('Julio', curdate()),
+('Paula', curdate()),
+('Lucas', curdate());
 
 select * from clientes;
-
-/*A função não funciona de um modo realmente prático, precisa de algum ajuste
-no momento ela irá somar todos os cadastros independete do dia*/
 
 delimiter $$
 
@@ -42,7 +30,7 @@ CREATE FUNCTION fn_soma (registro int, dtCadastro date) RETURNS INT
 BEGIN
 	
 declare Soma int;	
-	SELECT count(registro) from clientes where day(dtCadastro)=day('2022-12-21')
+	SELECT count(registro) from clientes where day(dtCadastro)=day(curdate())
     into Soma;
 	RETURN Soma;
         
