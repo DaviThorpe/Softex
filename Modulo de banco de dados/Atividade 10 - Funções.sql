@@ -11,31 +11,31 @@ registro int not null auto_increment,
 dtCadastro date,
 primary key (registro));
 
+select * from clientes;
+
 insert into clientes
 (nome, dtCadastro)
 values
-('Pedro', '2022-09-19'),
-('Ana', '2022-09-19'),
-('Julio', '2022-09-19'),
-('Paula', '2022-09-19'),
-('Lucas', '2022-09-20');
+('Pedro', curdate()),
+('Ana', curdate()),
+('Julio', curdate()),
+('Paula', curdate()),
+('Lucas', curdate());
 
 select * from clientes;
 
 delimiter $$
 
-CREATE FUNCTION fn_soma () RETURNS INT
+CREATE FUNCTION fn_soma (registro int, dtCadastro date) RETURNS INT
 BEGIN
 	
-    declare Soma, Retorno int;
-    
-    SELECT COUNT(registro) as cadastros_dia , dtCadastro into Soma 
-	from clientes;
-    
+declare Soma int;	
+	SELECT count(registro) from clientes where day(dtCadastro)=day(curdate())
+    into Soma;
 	RETURN Soma;
-    
+        
 END $$
 
 delimiter ; 
 
-select`loja`.`fn_soma`();
+select fn_soma(registro, dtCadastro) as clientes_cad, day(dtCadastro) as dia_cad from clientes; 
