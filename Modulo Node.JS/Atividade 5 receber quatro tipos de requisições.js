@@ -25,3 +25,5 @@ app.delete('/', (request, response) => {
 app.listen(8080, () => {
   console.log('Servidor iniciado na porta 8080');
 });
+
+// Para rodar o código, deve-se usar o comando "node" seguido do nome do arquivo no terminal ou prompt de comando.
