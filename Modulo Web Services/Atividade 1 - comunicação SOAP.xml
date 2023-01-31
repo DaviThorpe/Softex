@@ -1,0 +1,49 @@
+Uma empresa precisa se comunicar com outras para enviar informações pessoais sobre seus clientes, 
+como nome, endereço e número de telefone. É importante garantir a segurança desses dados e se 
+preocupar com quem eles são compartilhados. 
+Para isso, crie a estrutura de um web service, que demonstra exemplos de comunicação SOAP 
+(requisição e resposta em xmls) e explique como ele funciona.  
+
+
+REQUEST - REQUISIÇÃO:
+POST    /consultaCliente HTTP/1.1
+Host: www.minhaempresa.com
+Content-Type: aplication/soap+xml; charset=utf-8
+Content-Lenght: nnn
+
+</xml version="1.0"/>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body xmlns:m="http://www.minhaempresa.com/consultaCliente">
+    <m:consultaClienteRequest>
+    	<m:cpf>99999999999</m:cpf>
+    </m:consultaClienteRequest>
+  </soap:Body>
+</soap:Envelope>
+
+RESPONSE - RESPOSTA:
+HTTP/1.1 200 OK
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns: soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body xmlns:m="http://www.minhaempresa.com/consultaCliente">
+	<m:consultaClienteResponse>
+		<m:nome>Monkey D. Luffy</m:nome>
+		<m:endereco>Grand Line</m:endereco>
+		<m:numTelefone>(xx)xxxxx-xxxx</m:numTelefone>
+	</m:consultaClienteResponse>
+  </soap:Body>
+</soap:Envelope>
+
+De um modo geral, uma mensagem feita por SOAP para um web service é formada por três elementos:
+
+Envelope: Elemento raiz da mensagem, que define um documento XML como uma mensagem SOAP.
+
+Header: É um elemento opcional no XML, que deve ser utilizado quando se quer enviar informações, 
+por exemplo, informações de segurança.
+
+Body: É um elemento obrigatório que contém os dados de negócio que o servidor está esperando.
+A comunicação em questão utiliza um web service SOAP, faz uma consulta pelo CPF de um cliente 
+(através da tag m:consultaClienteRequest) e o servidor responde com um nome, endereço e número de telefone.
